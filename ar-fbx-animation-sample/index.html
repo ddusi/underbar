@@ -29,7 +29,7 @@
 		
 		// Loading the Letsee WebAR Engine
 		const config = {
-			"appKey": "YOUR_APP_KEY",   // Replace the app key here with your own app key
+			"appKey": "f74997f672f2e251be84a05d96cb45a83ce6c3551b7e0c64b207b63a87c4a306",   // Replace the app key here with your own app key
 			"trackerType": "IMAGE"      // For planar image tracking, trackerType should be IMAGE
 		};
 		const letsee = new Letsee(config);
@@ -60,7 +60,9 @@
 				mixer = new THREE.AnimationMixer(object);
 				const action = mixer.clipAction(object.animations[0]);
 				action.play();
-				object.position.y = - 95;
+				object.position.y = - 20;
+				object.rotation.x = 20;
+				// object.position.z = 50;
 				
 				// After loading model, add it into the planar image target
 				renderer.addObjectToEntity('letsee-marker.json', object)
