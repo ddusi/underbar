@@ -60,9 +60,10 @@
 				mixer = new THREE.AnimationMixer(object);
 				const action = mixer.clipAction(object.animations[0]);
 				action.play();
+				// object.position.x = 10;
 				object.position.y = - 20;
-				object.rotation.x = 20;
 				// object.position.z = 50;
+				object.rotation.x = 20;
 				
 				// After loading model, add it into the planar image target
 				renderer.addObjectToEntity('letsee-marker.json', object)
